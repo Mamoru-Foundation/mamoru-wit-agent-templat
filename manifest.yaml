@@ -1,0 +1,14 @@
+version: 0.0.1
+name: {{crate_name}}
+subscribable: {{ask_for_subscribable}}
+description: {{description}}
+logoUrl: https://mamoru.ai/default-agent-logo.png
+chains: [{{chain_name}}]
+tags: [mamoru,agent,wit]
+
+parameters:
+  - key: frequency
+    title: Incident Frequency
+    type: NUMBER
+    description: How often to report incidents in seconds
+    defaultValue: "60"

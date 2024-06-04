@@ -1,0 +1,36 @@
+[template]
+cargo_generate_version = ">=0.9.0"
+ignore = [ 
+  "target",
+  ".git",
+  ".vscode", 
+  "Cargo.lock", 
+]
+
+[placeholders]
+description = { type="text", prompt="Description for the agent?" }
+ask_for_subscribable = { type="bool", prompt="Agent subscribable?", default=true }
+chain_name = { prompt = "Select chain", choices = [
+    "SUI_TESTNET", 
+    "SUI_MAINNET", 
+    "PROVENANCE_TESTNET", 
+    "PROVENANCE_MAINNET", 
+    "KAVA_TESTNET", 
+    "KAVA_MAINNET",
+    "BOR_MAINNET",
+    "BOR_TESTNET",
+    "AVALANCHE_MAINNET",
+    "AVALANCHE_TESTNET",
+    "OPTIMISM_TESTNET",
+    "OPTIMISM_MAINNET",
+    "ETH_MAINNET",
+    "ETH_TESTNET",
+    "APTOS_MAINNET",
+    "APTOS_TESTNET",
+    "LINEA_MAINNET",
+    "LINEA_TESTNET",
+    "BSC_MAINNET",
+    "BSC_TESTNET",
+    "OSMOSIS_MAINNET",
+    "OSMOSIS_TESTNET",
+    ], default = "SUI_TESTNET", type = "string" }

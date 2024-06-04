@@ -1,0 +1,20 @@
+[package]
+name = "{{crate_name}}"
+version = "0.1.0"
+edition = "2021"
+description = """{{description}}"""
+authors = [ "{{authors}}" ]
+
+[dependencies]
+bitflags = "2.4.2"
+wit-bindgen = "0.21.0"
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+rmp-serde = "1.1.2"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"
